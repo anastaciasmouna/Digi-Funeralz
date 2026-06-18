@@ -1,0 +1,99 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  background-image: url("../background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
+}
+
+/* Main page wrapper */
+.dove-border {
+  min-height: 100vh;
+  box-sizing: border-box;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-bottom: 80px;
+}
+
+/* Repeated dove border */
+.dove-border::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10;
+
+  background-image: url("../dove.png");
+  background-size: 70px 70px;
+  background-repeat: repeat;
+
+  mask:
+    linear-gradient(#000 0 0) top / 100% 80px no-repeat,
+    linear-gradient(#000 0 0) bottom / 100% 80px no-repeat,
+    linear-gradient(#000 0 0) left / 80px 100% no-repeat,
+    linear-gradient(#000 0 0) right / 80px 100% no-repeat;
+}
+
+/* Logo at the top centre */
+.logo {
+  width: 280px;
+  max-width: 80%;
+  margin-top: 30px;
+  z-index: 2;
+  display: block;
+}
+
+/* Main content area */
+.main-content {
+  margin-top: 0px;
+  text-align: center;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Blingee image */
+.blingee {
+  width: 450px;
+  max-width: 90%;
+  display: block;
+}
+
+/* Pink memorial text box */
+.memorial-text-box {
+  width: 420px;
+  max-width: 80%;
+  margin: 20px auto 0 auto;
+
+  background: hotpink;
+  padding: 18px 22px;
+
+  border: 3px solid white;
+  box-shadow: 0 0 18px white;
+
+  position: relative;
+  z-index: 2;
+}
+
+/* Paragraph text */
+.memorial-text-box p {
+  margin: -40;
+
+  font-size: 18px;
+  line-height: 1.35;
+  text-align: center;
+
+  color: black;
+}
